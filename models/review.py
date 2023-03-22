@@ -1,11 +1,16 @@
 #!/usr/bin/python3
-"""Module for Review class."""
-
+"""
+Review Representation module
+"""
 from models.base_model import BaseModel
 
 
 class Review(BaseModel):
-    """Class representing a Review."""
+    """
+    Represent a Review
+    Inherit from base model
+    """
+
     place_id = ""
     user_id = ""
     text = ""
