@@ -36,8 +36,8 @@ class TestCity_instantiation(unittest.TestCase):
         self.assertEqual(str, type(City.state_id))
         self.assertIn("state_id", dir(cy))
         self.assertNotIn("state_id", cy.__dict__)
-    def
-test_name_is_public_class_attribute(self):
+
+    def test_name_is_public_class_attribute(self):
         cy = City()
         self.assertEqual(str, type(City.name))
         self.assertIn("name", dir(cy))
@@ -76,8 +76,7 @@ test_name_is_public_class_attribute(self):
         cy = City(None)
         self.assertNotIn(None, cy.__dict__.values())
 
-    def 
-test_instantiation_with_kwargs(self):
+    def test_instantiation_with_kwargs(self):
         dt = datetime.today()
         dt_iso = dt.isoformat()
         cy = City(id="345", created_at=dt_iso, updated_at=dt_iso)
@@ -106,8 +105,7 @@ class TestCity_save(unittest.TestCase):
         except IOError:
             pass
         try:
-            os.rename("tmp", 
-"file.json")
+            os.rename("tmp", "file.json")
         except IOError:
             pass
 
@@ -194,4 +192,3 @@ class TestCity_to_dict(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-        
