@@ -172,7 +172,7 @@ class TestState_to_dict(unittest.TestCase):
             'updated_at': dt.isoformat(),
         }
 
-self.assertDictEqual(st.to_dict(), tdict)
+        self.assertDictEqual(st.to_dict(), tdict)
 
     def test_contrast_to_dict_dunder_dict(self):
         st = State()
